@@ -31,7 +31,7 @@ Características:
   
 Acciones:
 
-- Cocinero: `cocinar`, `verificar_receta`, `mostrar_productividad_total`
+- Cocinero: `cocinar`, `mostrar_productividad_total`
 
 ## Diseño
 
@@ -44,7 +44,6 @@ classDiagram
         int productividad
         int productividad_total
         cocinar(receta)
-        verificar_receta(receta)
         mostrar_productividad_total(cocineros)
     }
 ```
