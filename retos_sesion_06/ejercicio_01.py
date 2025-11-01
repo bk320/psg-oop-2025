@@ -24,14 +24,17 @@ class Minibus:
                 self.pasajeros.append(pasajero)
                 print(f"El pasajero {pasajero.nombre} ha subido al minibus")
         else:
-            print(f"Disculpe su destino {pasajero.destino} no está en el recorrido del minibus")
+            print(f"Disculpe {pasajero.nombre}, su destino {pasajero.destino} no está en el recorrido del minibus")
 
     def bajar_pasajero(self, pasajero):
         if pasajero.destino == self.ubicacion_actual:
             self.pasajeros.remove(pasajero)
             print(f"El pasajero {pasajero.nombre} ha bajado en su destino: {pasajero.destino}")
         
-
+    def mostrar_estado(self):
+        recorrido_str = " ---- ".join(self.recorrido)
+        pasajeros_str = ", ".join([pasajero.nombre for pasajero in self.pasajeros])
+        print(f"{recorrido_str}\n{' ' * (recorrido_str.index(self.ubicacion_actual))}🚐 {pasajeros_str} \n")
 class Pasajero:
     def __init__(self, nombre, destino):
         self.nombre = nombre
@@ -46,18 +49,22 @@ Pasajero_4 = Pasajero("Luis", "Ayacucho")
 Pasajero_5 = Pasajero("Ana", "Vaticano")
 Pasajero_6 = Pasajero("Pedro", "Frutillar")
 
+Minibus_1.mostrar_estado()
 Minibus_1.subir_pasajero(Pasajero_1)
 Minibus_1.subir_pasajero(Pasajero_5)
+Minibus_1.mostrar_estado()
 Minibus_1.avanzar()
+Minibus_1.mostrar_estado()
 
 Minibus_1.subir_pasajero(Pasajero_2)
 Minibus_1.avanzar()
-
+Minibus_1.mostrar_estado()
 Minibus_1.subir_pasajero(Pasajero_3)
 Minibus_1.avanzar()
-
+Minibus_1.mostrar_estado()
 Minibus_1.subir_pasajero(Pasajero_6)
 Minibus_1.avanzar()
-
+Minibus_1.mostrar_estado()
 Minibus_1.subir_pasajero(Pasajero_4)
 Minibus_1.avanzar()
+Minibus_1.mostrar_estado()
