@@ -14,7 +14,7 @@ Requisitos:
 - Agregar tomate
 - Agregar cebolla
 - Agregar mayonesa
-- Comer en el restaurante o llevar
+- Los clientes deciden comer en el restaurante o ordenar para llevar
 
 Objetos:
 
@@ -23,11 +23,12 @@ Objetos:
 Caracteristicas:
 
 - Hamburguesa
-  - carne
+  - tipo_hamburguesa
   - lechuga
   - tomate
   - cebolla
   - mayonesa
+  - para_llevar
 
 Acciones:
 
@@ -37,24 +38,26 @@ Acciones:
 
 Clases:
 
-- Hamburquesa
-  - Nombre: Hamburguesa
-  - Atributos:
-    - carne
+- Hamburguesa
+  - nombre: Hamburguesa
+  - atributos:
+    - tipo_hamburguesa
     - lechuga
     - tomate
     - cebolla
     - mayonesa
-  - Métodos:
-    - (No hay métodos)
+    - para_llevar
+  - metodos:
+    - (no hay métodos)
 
 ```mermaid
 classDiagram
     class Hamburguesa {
-        carne
+        tipo_hamburguesa
         lechuga
         tomate
         cebolla
         mayonesa
+        para_llevar
     }
 ```

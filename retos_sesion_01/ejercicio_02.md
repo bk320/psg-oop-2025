@@ -28,12 +28,12 @@ Caracteristicas:
 - Camiseta
   - manga
   - Color
-  - Talla
+  - talla
 
 - Pantalon
-  - Tela
-  - Color
-  - Talla
+  - tela
+  - color
+  - talla
 
 Acciones:
 
@@ -44,22 +44,22 @@ Acciones:
 Clases:
 
 - Camiseta
-  - Nombre: Camiseta
-  - Atributos:
+  - nombre: Camiseta
+  - atributos:
     - manga
     - color
     - talla
-  - Métodos:
+  - métodos:
     - (No hay métodos)
 
 - Pantalon
-  - Nombre: Pantalon
-  - Atributos:
+  - nombre: Pantalon
+  - atributos:
     - tela
     - color
     - talla
-  - Métodos:
-    - (No hay métodos)
+  - métodos:
+    - (no hay métodos)
 
 ```mermaid
 classDiagram

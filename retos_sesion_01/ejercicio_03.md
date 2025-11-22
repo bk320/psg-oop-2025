@@ -18,60 +18,46 @@ Requisitos:
 
 Objetos:
 
-- Dibujo
 - Perro
 
 Caracteristicas:
 
-- Dibujo
-  - Perro
-  - Accesorio
-  - Formato
-
 - Perro
-  - Raza
-  - Color_pelaje
-  - Tamaño_oreja
-  - Tipo_oreja
+  - raza
+  - color_pelaje
+  - tamanio_oreja
+  - tipo_oreja
+  - accesorio
+  - formato_imagen
 
 Acciones:
 
-- (No hay acciones)
+- (no hay acciones)
 
 ## Diseño
 
 Clases:
 
-- Dibujo
-  - Nombre: Dibujo
-  - Atributos:
-    - perro
-    - accesorios
-    - formato
-  - Métodos:
-    - (No hay métodos)
-
 - Perro
-  - Nombre: Perro
-  - Atributos:
+  - nombre: Perro
+  - atributos:
     - raza
     - color_pelaje
-    - tamaño_oreja
+    - tamanio_oreja
     - tipo_oreja
-  - Métodos:
-    - (No hay métodos)
+    - accesorios
+    - formato_imagen
+  - metodos:
+    - (no hay métodos)
 
 ```mermaid
 classDiagram
-    class Dibujo{
-        perro
-        accesorios
-        formato
-    }
     class Perro{
         raza
         color_pelaje
-        tamaño_oreja
+        tamanio_oreja
         tipo_oreja
+        accesorios
+        formato_imagen
     }
 ```
