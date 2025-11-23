@@ -88,4 +88,5 @@ classDiagram
         + __delitem__()
         + __iter__()
     }
+    Catalogo o-- Destino
 ```
