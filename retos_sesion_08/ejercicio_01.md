@@ -31,7 +31,7 @@ Requerimientos:
 - Las fracciones pueden realizar las operaciones aritemeticas
 como: `+`, `-`, `*`, `/`
 - El resultado de las operaciones debe representarse en su `minima exprecion`,
-en forma de fraccion si es posible
+en forma de fraccion si es posible (1/1 = 1, 0/2 = 0)
 - Se utilizara el maximo comun divisor para la simplificacion
 - Las fracciones pueden realizar operaciones de comparacion, `==`, `<`, `>`, `!=`
 
@@ -49,7 +49,7 @@ Acciones:
 
 - Fraccion
   - representacion_en_cadena()
-  - minimo_comun_denominador()
+  - maximo_comun_divisor()
   - simplificar()
   - suma()
   - resta()
