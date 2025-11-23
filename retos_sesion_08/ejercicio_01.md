@@ -32,6 +32,7 @@ Requerimientos:
 como: `+`, `-`, `*`, `/`
 - El resultado de las operaciones debe representarse en su `minima exprecion`,
 en forma de fraccion si es posible (1/1 = 1, 0/2 = 0)
+- Una fraccion de denominador `0` debera dar error, ya que es indeterminada
 - Se utilizara el maximo comun divisor para la simplificacion
 - Las fracciones pueden realizar operaciones de comparacion, `==`, `<`, `>`, `!=`
 
