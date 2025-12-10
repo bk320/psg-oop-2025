@@ -10,13 +10,13 @@ Los pantalones tienen las tallas desde la 32 hasta la 44
 
 Requisitos:
 
-- Ofrece camisetas y pantalones
-- Elegir camiseta de manga corta o larga
-- Elegir pantalón de mezclilla o tela
-- Color camiseta: rojo, azul o verde
-- Color pantalon: negro, gris o blanco
-- Talla camiseta: S, M, L, XL
-- Talla pantalon: desde la 32 hasta la 44
+- La simulación debe modelar camisetas y pantalones.
+- La camiseta debe registrar el tipo de manga (corta o larga)
+- El pantalón debe registrar su tipo de material (mezclilla o tela)
+- La camiseta debe registrar su color (rojo, azul o verde)
+- El pantalón debe registrar su color (negro, gris o blanco)
+- La camiseta debe registrar su talla (S, M, L, XL)
+- El pantalón debe registrar su talla (desde 32 hasta 44)
 
 Objetos:
 
@@ -26,51 +26,51 @@ Objetos:
 Caracteristicas:
 
 - Camiseta
-  - manga
-  - Color
-  - talla
+  - tipo_manga
+  - color_camiseta
+  - talla_camiseta
 
 - Pantalon
-  - tela
-  - color
-  - talla
+  - tipo_tela
+  - color_pantalon
+  - talla_pantalon
 
 Acciones:
 
-- (No hay acciones)
+- (no hay acciones)
 
 ## Diseño
 
 Clases:
 
 - Camiseta
-  - nombre: Camiseta
-  - atributos:
-    - manga
-    - color
-    - talla
-  - métodos:
-    - (No hay métodos)
+  - Nombre: Camiseta
+  - Atributos:
+    - tipo_manga
+    - color_camiseta
+    - talla_camiseta
+  - Metodos:
+    - (No hay metodos)
 
 - Pantalon
-  - nombre: Pantalon
-  - atributos:
-    - tela
-    - color
-    - talla
-  - métodos:
-    - (no hay métodos)
+  - Nombre: Pantalon
+  - Atributos:
+    - tipo_tela
+    - color_pantalon
+    - talla_pantalon
+  - Metodos:
+    - (No hay metodos)
 
 ```mermaid
 classDiagram
     class Camiseta{
-        manga
-        color
-        talla
+        tipo_manga
+        color_camiseta
+        talla_camiseta
     }
     class Pantalon{
-        tela
-        color
-        talla
+        tipo_tela
+        color_pantalon
+        talla_pantalon
     }
 ```

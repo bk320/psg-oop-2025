@@ -8,56 +8,62 @@ El dibujo final puede descargarse en formato PNG o JPG.
 
 Requisitos:
 
-- Seleccionar raza: labrador o pastor alemán
-- Seleccionar color del pelaje
-- Selecionar tamaño de la oreja
-- Selecionar tipo de la oreja
-- Agregar sombrero
-- Agregar gafas
-- Formato de dibujo: PNG o JPG
+- La aplicación debe modelar un dibujo de perro
+- El Dibujo debe registrar la raza
+- El Dibujo debe registrar el color del pelaje
+- El Dibujo debe registrar el tamaño de la oreja
+- El Dibujo debe registrar el tipo de oreja
+- El Dibujo debe registrar hasta dos accesorios
+- El Dibujo debe registrar si lleva o no un sombrero
+- El Dibujo debe registrar si lleva o no lentes
+- El Dibujo debe permitir descargar la imagen en formato PNG o JPG
 
 Objetos:
 
-- Perro
+- Dibujo
 
 Caracteristicas:
 
-- Perro
-  - raza
+- Dibujo
+  - raza_perro
   - color_pelaje
   - tamanio_oreja
   - tipo_oreja
-  - accesorio
+  - tiene_sombrero
+  - tiene_lentes
   - formato_imagen
 
 Acciones:
 
-- (no hay acciones)
+- Dibujo
+  - (No hay acciones)
 
 ## Diseño
 
 Clases:
 
-- Perro
-  - nombre: Perro
-  - atributos:
-    - raza
+- Dibujo
+  - Nombre: Dibujo
+  - Atributos:
+    - raza_perro
     - color_pelaje
     - tamanio_oreja
     - tipo_oreja
-    - accesorios
+    - tiene_sombrero
+    - tiene_lentes
     - formato_imagen
-  - metodos:
-    - (no hay métodos)
+  - Metodos:
+    - (No hay metodos)
 
 ```mermaid
 classDiagram
-    class Perro{
-        raza
+    class Dibujo{
+        raza_perro
         color_pelaje
         tamanio_oreja
         tipo_oreja
-        accesorios
+        tiene_sombrero
+        tiene_lentes
         formato_imagen
     }
 ```

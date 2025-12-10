@@ -9,12 +9,12 @@ Ademas los clientes pueden decidir comer en el restaurante o llevar su pedido
 
 Requisitos:
 
-- Ofrece hamburguesas de res, pollo o vegetariana
-- Agregar lechuga
-- Agregar tomate
-- Agregar cebolla
-- Agregar mayonesa
-- Los clientes deciden comer en el restaurante o ordenar para llevar
+- La hamburguesa debe regstrar su tipo de carne: res, pollo o vegetariana
+- La hamburguesa debe permitir agregar o no, extra de lechuga
+- La hamburguesa debe permitir agregar o no, extra de tomate
+- La hamburguesa debe permitir agregar o no, extra de cebolla
+- La hamburguesa debe permitir agregar o no, extra de mayonesa
+- La hamburguesa debe registrar si es para comer en el restaurante o para llevar.
 
 Objetos:
 
@@ -38,16 +38,16 @@ Acciones:
 
 Clases:
 
-- Hamburguesa
-  - nombre: Hamburguesa
-  - atributos:
+- Hamburguesa:
+  - Nombre: Hamburguesa
+  - Atributos:
     - tipo_hamburguesa
     - lechuga
     - tomate
     - cebolla
     - mayonesa
     - para_llevar
-  - metodos:
+  - Metodos:
     - (no hay métodos)
 
 ```mermaid
