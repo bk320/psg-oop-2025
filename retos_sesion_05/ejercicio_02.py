@@ -1,35 +1,36 @@
 class Nadador:
     
     def nadar(self):
-        print("Se esta desplazando por agua")
-    def mostrar(self):
-        print("Tipo Nadador")
+        print("Me desplazo por el agua")
 
 class Volador:
 
     def volar(self):
-        print("Se esta desplazando por el aire")
-    def mostrar(self):
-        print("Tipo Volador")
+        print("Me desplazo por el aire")
         
 class Pez(Nadador):
 
     def mostrar(self):
-        print("Hola soy un Pez de tipo:")
-        super().mostrar()
+        print("\nHola soy un Pez de:")
+        if isinstance (self, Nadador):
+            print("Tipo nadador")
 
 class Pajaro(Volador):
 
     def mostrar(self):
-        print("Hola soy un Pájaro de tipo:")
-        super().mostrar()
+        print("\nHola soy un Pájaro de:")
+        if isinstance (self, Volador):
+            print("Tipo volador")
 
 class Pato(Nadador, Volador):
 
     def mostrar(self):
-        print("Hola soy un Pato de tipos:")
-        Nadador.mostrar(self)
-        Volador.mostrar(self)
+        print("\nHola soy un Pato de:")
+        if isinstance (self, Nadador):
+            print("Tipo nadador")
+        if isinstance (self, Volador):
+            print("Tipo volador")
+
 
 # Ejemplo de uso
 pez = Pez()

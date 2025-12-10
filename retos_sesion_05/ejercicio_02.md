@@ -21,22 +21,22 @@ personaje y su habilidad principal o combinada.
 
 Requisitos:
 
-- Un personaje pertenece a uno o mas tipos: nadador, volador
-- EL nadador puede ejecutar la accion nadar, se desplaza por agua
-- El volador puede ejecutar la accion volar, se desplaza por aire
-- Existen tres personajes: Pez, Pajaro y Pato
-- Pez tiene la habilidad de nadar
-- Pajaro tiene la avilidad de volar
-- Pato tiene las habilidades de nadar y volar
-- Cada personaje tiene el metodo mostrar
-- Mostrar indica el tipo de personaje y su habilidad
+- El videojuego debe modelar los tipos de personaje Nadador, Volador,
+o la combinación de ambos
+- El personaje tipo Nadador debe ejecutar la habilidad nadar
+- El personaje tipo Volador debe ejecutar la habilidad volar
+- En el juego existen tres personajes principales: Pez, Pajaro y Pato
+- El Pez debe tener la habilidad de nadar
+- El Pajaro debe tener la habilidad de volar
+- El Pato debe tener las habilidades de nadar y volar
+- Cada personaje debe mostrar su tipo y su habilidad
 
 Objetos:
 
 - Nadador (Clase Padre)
 - Volador (Clase Padre)
 - Pez (hereda de Nadador)
-- Pájaro (hereda de Volador)
+- Pajaro (hereda de Volador)
 - Pato (hereda de Nadador y Volador)
 
 Características:
@@ -47,7 +47,7 @@ Características:
   - (sin características)
 - Pez:
   - (sin características)
-- Pájaro
+- Pajaro
   - (sin características)
 - Pato
   - (sin características)
@@ -55,32 +55,65 @@ Características:
 Acciones:
 
 - Nadador:
-  - nadar
-  - mostrar
+  - nadar()
 - Volador:
-  - volar
-  - mostrar
+  - volar()
 - Pez:
-  - mostrar
-- Pájaro
-  - mostrar
+  - mostrar()
+- Pajaro
+  - mostrar()
 - Pato
-  - mostrar
+  - mostrar()
 
 ## Diseño
+
+Clases:
+
+- Nadador
+  - Nombre: Nadador
+  - Atributos:
+    - (no hay atributos)
+  - Metodos:
+    - nadar()
+
+- Volador
+  - Nombre: Volador
+  - Atributos:
+    - (no hay atributos)
+  - Metodos:
+    - volar()
+
+- Pez
+  - Nombre: Pez
+  - Atributos:
+    - (no hay atributos)
+  - Metodos:
+    - mostrar()
+
+- Pajaro
+  - Nombre: Pajaro
+  - Atributos:
+    - (no hay atributos)
+  - Metodos:
+    - mostrar()
+
+- Pato
+  - Nombre: Pato
+  - Atributos:
+    - (no hay atributos)
+  - Metodos:
+    - mostrar()
 
 ```mermaid
 classDiagram
     class Nadador {
         +nadar()
-        +mostrar()
     }
     class Volador {
         +volar()
-        +mostrar()
     }
     class Pez {
-        +volar()
+        +mostrar()
     }
     class Pajaro {
         +mostrar()

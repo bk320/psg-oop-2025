@@ -15,20 +15,19 @@ Existen dos tipos de vehículos con características específicas:
 
 Requisitos:
 
-- Los vehiculos tienen las siguientes caracteristicas: velocidad y medio
-- La velocidad es un dato protegido
-- La velocidad puede consultarse
-- La velocidad solo puede modificarse mediante acciones especificas
-- El medio medio representa el entorno en el que se desplaza el vehiculo
-- Existen dos tipos de vehiculos: Bicicleta y Avion
-- La bicicleta incremeta su velocidad con la accion pedalear
-- El avion incrementa su velocidad con la accion volar
+- El vehiculo debe registrar su velocidad
+- La velocidad puede consultarse pero no modificarse
+- El vehículo debe registrar el medio por el que se desplaza.
+- El medio puede consultarse y modificarse
+- Existen dos tipos de vehiculos (bicicleta, avión)
+- La bicicleta puede incrementar su velocidad al pedalear.
+- El avión puede incrementar su velocidad al volar.
 
 Objetos:
 
-- Vehiculo (Clase Padre)
-- Bicicleta (hereda de Vehiculo)
-- Avion (hereda de Vehiculo)
+- Vehiculo (clase padre)
+- Bicicleta (clase hija)
+- Avion (clase hija)
 
 Características:
 
@@ -36,37 +35,57 @@ Características:
   - velocidad: float
   - medio: String
 - Bicicleta:
-  - (sin características)
+  - (Sin características)
 - Avion:
-  - (sin características)
+  - (Sin características)
 
 Acciones:
 
 - Vehiculo:
-  - mostrar
+  - get_velocidad()
 - Bicicleta:
-  - pedalear
-  - mostrar
+  - pedalear()
 - Avion:
-  - volar
-  - mostrar
+  - volar()
 
 ## Diseño
+
+Clases:
+
+- Vehiculo
+  - Nombre: Vehiculo
+  - Atributos:
+    - velocidad: float
+    - medio: String
+  - Metodos:
+    - get_velocidad()
+
+- Bicicleta
+  - Nombre: Bicicleta
+  - Atributos:
+    - (no hay atributos)
+  - Metodos:
+    - pedalear()
+
+- Avion
+  - Nombre: Avion
+  - Atributos:
+    - (no hay atributos)
+  - Metodos:
+    - volar()
 
 ```mermaid
 classDiagram
     class Vehiculo {
-        #velocidad: str
-        +medio: str
-        +mostrar()
+        #velocidad: float
+        +medio: String
+        +get_velocidad()
     }
     class Bicicleta {
         +pedalear()
-        +mostrar()
     }
     class Avion {
         +volar()
-        +mostrar()
     }
     Vehiculo <|-- Bicicleta
     Vehiculo <|-- Avion
