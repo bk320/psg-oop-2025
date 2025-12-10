@@ -1,15 +1,16 @@
 class Animal:
     origen = "feral"
-    def __init__ (self, especie, tipo):
+    def __init__ (self, especie, tipo_animal, lugar_hallazgo):
         self.especie = especie
-        self.tipo = tipo
+        self.tipo_animal = tipo_animal
+        self.lugar_hallazgo = lugar_hallazgo
 
 print("Animales encontrados...")
-mamifero1 = Animal("Tigre", "mamífero")
-mamifero2 = Animal("Lobo", "mamífero")
-print("Animal 1: ", mamifero1.origen, mamifero1.especie, mamifero1.tipo)
-print("Animal 2: ", mamifero2.origen, mamifero2.especie, mamifero2.tipo)
-reptil1 = Animal("Cocodrilo", "reptil")
-print("Animal 3: ", reptil1.origen, reptil1.especie, reptil1.tipo)
-ave1 = Animal("Águila", "ave")
-print("Animal 4: ", ave1.origen, ave1.especie, ave1.tipo)
+tigre = Animal("Tigre", "mamifero", "selva")
+lobo = Animal("Lobo", "mamifero", "bosque")
+print("Animal 1: ", tigre.origen, tigre.especie, tigre.tipo_animal, tigre.lugar_hallazgo)
+print("Animal 2: ", lobo.origen, lobo.especie, lobo.tipo_animal, lobo.lugar_hallazgo)
+reptil= Animal("Cocodrilo", "reptil", "río")
+print("Animal 3: ", reptil.origen, reptil.especie, reptil.tipo_animal, reptil.lugar_hallazgo)
+ave= Animal("Aguila", "ave", "montaña")
+print("Animal 4: ", ave.origen, ave.especie, ave.tipo_animal, ave.lugar_hallazgo)
