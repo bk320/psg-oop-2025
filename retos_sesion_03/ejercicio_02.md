@@ -15,11 +15,12 @@ Receta -> Ingredientes Requeridos
 
 Requisitos:
 
-- Crear un cocinero
-- Cada cocinero tiene una lista de ingredientes disponibles
-- Los cocineros pueden preparar recetas si tienen todos los ingredientes requeridos
-- Cada vez que cocina con éxito, aumenta su productividad
-- Se puede calcular la productividad total de todos los cocineros
+- El cocinero debe registrar su inventario de ingredientes disponibles
+- El cocinero debe registrar las recetas que puede preparar
+- El cocinero debe registrar su nivel de productividad
+- El cocinero debe incrementar su productividad al preparar una receta con exito
+- Se puede calcular la produtividad del equipo si hay mas de un cocinero
+- Solo existen las recetas: pan, pizza y galleta
 
 Objetos:
 
@@ -27,23 +28,41 @@ Objetos:
 
 Características:
 
-- Cocinero: `nombre`, `ingredientes`, `recetas`, `productividad`, `productividad_total`
+- Cocinero:
+  - nombre: Strin
+  - ingredientes: List[String]
+  - recetas: dict
+  - productividad: int
   
 Acciones:
 
-- Cocinero: `cocinar`, `mostrar_productividad_total`
+- Cocinero:
+  - cocinar
+  - productividad_total
 
 ## Diseño
+
+Clases:
+
+- Cocinero
+  - Nombre: Cocinero
+  - Atributos:
+    - nombre: String
+    - ingredientes: List[String]
+    - recetas: dict
+    - productividad: int
+  - Metodos:
+    - cocinar()
+    - productividad_total()
 
 ```mermaid
 classDiagram
     class Cocinero {
         String nombre
         list ingredientes
-        list recetas
+        dict recetas
         int productividad
-        int productividad_total
         cocinar(receta)
-        mostrar_productividad_total(cocineros)
+        productividad_total(list[Cocinero])
     }
 ```

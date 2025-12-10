@@ -15,33 +15,54 @@ Cada atleta puede realizar las siguientes acciones:
 
 Requisitos:
 
-- Crear un atleta
-- El atleta tiene tres atributos: nombre, energia, fuerza
-- El atleta puede entrenar, descansar y comer
-- Entrenar aumenta la fuerza pero disminuye la energia
-- Descansar aumenta la energia
-- Comer hamburguesas aumenta la energia
+- El atleta debe registrar su nombre
+- El atleta debe registrar su nivel de energia
+- El atleta debe registrar su cantidad fuerza
+- El atleta puede realizar acciones para aumentar o reducir sus valores
+de energia o fuerza
+- El atleta puede entrenar para aumenta la fuerza y disminuir la energia
+- El atlera puede descansar para recuperar energia
+- El atleta solo puede comer hamburguesa para recuperar energia
 
 Objetos:
 
 - Atleta
 
-Características:
+Caracteristicas:
 
-- Atleta: `nombre`, `energía`, `fuerza`
+- Atleta:
+  - nombre: String
+  - energia: int
+  - fuerza: int
   
 Acciones:
 
-- Atleta: `Entrenar`, `Descansar`, `Comer`
+- Atleta:
+  - entrenar()
+  - descansar()
+  - comer()
 
 ## Diseño
+
+Clases:
+
+- Atleta
+  - Nombre: Atleta
+  - Atributos:
+    - nombre: String
+    - energia: int
+    - fuerza: int
+  - Metodos:
+    - entrenar()
+    - descansar()
+    - comer()
 
 ```mermaid
 classDiagram
     class Atleta {
         String nombre
-        float energia
-        float fuerza
+        int energia
+        int fuerza
         entrenar()
         descansar()
         comer()

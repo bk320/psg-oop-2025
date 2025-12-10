@@ -1,5 +1,4 @@
 class Cocinero:
-    productividad_total = 0
     recetas = {
         'pan': ['harina', 'agua'],
         'pizza': ['harina', 'agua', 'sal', 'tomate', 'queso'],
@@ -22,24 +21,28 @@ class Cocinero:
                     print(f"{self.nombre} no tiene los ingredientes para cocinar {receta}")
                     return
             print(f"{self.nombre} ha cocinado una {receta}")
-            self.productividad = self.productividad + 1
-            Cocinero.productividad_total = Cocinero.productividad_total + 1
+            self.productividad += 1
         else:
             print(f"{self.nombre} no posee la receta de {receta}")
     
     @staticmethod
-    def mostrar_productividad_total():
-        print(f"La productividad total de los cocineros es: {Cocinero.productividad_total}")
+    def productividad_total(cocineros):
+        total = 0
+        for cocinero in cocineros:
+            total += cocinero.productividad
+        print(f"La productividad total de los cocineros es: {total}")
     
-cocinero1 = Cocinero.crear_cocinero("Beto", ["harina", "agua", "sal", "tomate", "queso"])
-cocinero2 = Cocinero.crear_cocinero("Ron", ["harina", "agua", "chocolate", "sal"])
-cocinero3 = Cocinero.crear_cocinero("Richard", ["agua", "harina"])
+beto = Cocinero.crear_cocinero("Beto", ["harina", "agua", "sal", "tomate", "queso"])
+ron = Cocinero.crear_cocinero("Ron", ["harina", "agua", "chocolate", "sal"])
+richard = Cocinero.crear_cocinero("Richard", ["agua", "harina"])
 
-cocinero1.cocinar("pizza")
-cocinero1.cocinar("pan")
-cocinero2.cocinar("galleta")
-cocinero3.cocinar("pan")
-cocinero3.cocinar("pizza")
-cocinero3.cocinar("ensalada")
+beto.cocinar("pizza")
+beto.cocinar("pan")
 
-Cocinero.mostrar_productividad_total()
+ron.cocinar("galleta")
+
+richard.cocinar("pan")
+richard.cocinar("pizza")
+richard.cocinar("ensalada")
+
+Cocinero.productividad_total([beto, ron, richard])
