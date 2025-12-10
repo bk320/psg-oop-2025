@@ -16,15 +16,17 @@ una vez asignado.
 
 Requisitos:
 
-- Un banco necesita un modulo para gestionar cuentas
-- Las cuentas tienen un saldo que es privado
-- El saldo solo se modifica al depositar o retirar
-- Depositar incrementa el saldo
-- Retirar reduce el saldo y solo si el saldo es suficiente
-- Las cuentas tienen un Numero de cuenta que es privado
-- EL numero de cuenta no puede modificarse
-- El nombre del titular es publico
-- El nombre del titular puede modificarse
+- Un banco debe modelar cuentas bancarias
+- La cuenta debe registrar su número de identificación
+- EL numero de cuenta puede consultarse, pero no modificarse
+- La cuenta debe registrar el nombre del titular
+- El nombre del titular puede consultarse y modificarse
+- La cuenta debe registrar su saldo
+- El saldo puede consultarse, pero no modificarse
+- El saldo se puede modificar al depositar o retirar
+- La cuenta debe incrementar su saldo al depositar dinero
+- La cuenta debe reducir su saldo al retirar dinero, siempre que los fondos
+sean suficientes
 
 Objetos:
 
@@ -41,11 +43,25 @@ Acciones:
 
 - Cuenta:
   - get_saldo()
+  - get_numero_cuenta()
   - depositar(monto)
   - retirar(monto)
-  - get_numero_cuenta()
 
 ## Diseño
+
+Clases:
+
+- Cuenta
+  - Nombre: Cuenta
+  - Atributos:
+    - titular: String
+    - numero_cuenta: String
+    - saldo: float
+  - Metodos:
+    - get_saldo()
+    - get_numero_cuenta()
+    - depositar()
+    - retirar()
 
 ```mermaid
 classDiagram
@@ -54,8 +70,8 @@ classDiagram
         -numero_cuenta: String
         -saldo: float
         +get_saldo()
+        +get_numero_cuenta()
         +depositar(monto)
         +retirar(monto)
-        +get_numero_cuenta()
     }
 ```

@@ -1,32 +1,33 @@
-class celula:
-    def __init__ (self, adn, tipo_celula, energia):
+class Celula:
+    def __init__ (self, adn, tipo_celula, nivel_energia):
         self._adn = adn
         self.tipo_celula = tipo_celula
-        self.__energia = energia
+        self.__nivel_energia = nivel_energia
+
     @property
     def adn(self):
         return self._adn
     
     def comer(self):
-        self.__energia += 10
-        print(f"la celula se ha alimentado, nivel de energía: {self.__energia}")
+        self.__nivel_energia += 10
+        print(f"la celula se ha alimentado, nivel de energia: {self.__nivel_energia}")
         
     def dividir(self):
-        if self.__energia >= 20:
-            self.__energia -= 20
-            print("La célula se ha dividido, nivel de energía restante:", self.__energia)
+        if self.__nivel_energia >= 20:
+            self.__nivel_energia -= 20
+            print("La celula se ha dividido, nivel de energia restante:", self.__nivel_energia)
         else:
-            print("Energía insuficiente para dividirse.")
+            print("Energia insuficiente para dividirse.")
         
 # Implementando la clase
-celula1 = celula("AGCTTAGC", "Eucariota", 35)
-print(f"ADN: {celula1.adn}")
-print(f"Tipo de célula: {celula1.tipo_celula}")
-celula1.tipo_celula = "Procariota"
-print(f"Nuevo tipo de célula: {celula1.tipo_celula}")
-celula1.comer()
-celula1.dividir()
+celula = Celula("AGCTTAGC", "Eucariota", 35)
+print(f"ADN: {celula.adn}")
+print(f"Tipo de celula: {celula.tipo_celula}")
+celula.tipo_celula = "Procariota"
+print(f"Nuevo tipo de celula: {celula.tipo_celula}")
+celula.comer()
+celula.dividir()
 try:
-    print(f"Energía: {celula1.__energia}")
+    print(f"Energía: {celula.__nivel_energia}")
 except AttributeError as e:
     print(f"Error: {e}")

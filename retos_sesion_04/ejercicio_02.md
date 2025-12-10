@@ -12,12 +12,14 @@ mediante las acciones de comer o dividirse.
 
 Requisitos:
 
-- Cada celula tiene las estos atributos: ADN, tipo de celula y energia
-- El ADN puede consultarse pero no modificarse
-- el tipo de celula puede consultarse y modificarse
-- la energia es un dato privado
-- la energia puede aumentar al comer
-- la energia puede disminuir al dividirse
+- La celula debe registrar su tipo de ADN
+- El tipo de ADN se puede consultar pero no modificar
+- La celula debe registrar su tipo de celula al que pertenece
+- El tipo de celula se puede consultar y modificar
+- La celula debe registrar su nivel de energia
+- La celula solo puede modificar su energía a través de las acciones de comer o dividirse
+- La celula debe incrementar su energía al comer
+- La celula debe disminuir su energía al dividirse
 
 Objetos:
 
@@ -26,18 +28,31 @@ Objetos:
 Características:
 
 - Celula:
-  - ADN: String
+  - adn: String
   - tipo_celula: String
-  - energia: int
+  - nivel_energia: int
 
 Acciones:
 
 - Celula:
-  - get_ADN()
+  - get_adn()
   - comer()
   - dividir()
 
 ## Diseño
+
+Clases:
+
+- Celula
+  - Nombre: Celula
+  - Atributos:
+    - adn: String
+    - tipo_celula: String
+    - nivel_energia: int
+  - Metodos:
+    - get_adn()
+    - comer()
+    - dividir()
 
 ```mermaid
 classDiagram
