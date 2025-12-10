@@ -12,22 +12,22 @@ Toma en cuenta las siguientes características:
 
 - Un minibus tiene una lista de paradas programadas (ejemplo: ["Arce", "Prado", "Perez"]).
 - Un minibus puede transportar múltiples pasajeros.
-Simular el movimiento del minibus entre paradas y las acciones de subida y bajada de pasajeros.
+- Simular el movimiento del minibus entre paradas y las acciones de subida y bajada de pasajeros.
 
 ## Análisis
 
 Requisitos:
 
-- Los pasajeros pueden abordar distintos minibuses
-- Cada minibus esta identificado por un numero de ruta y recorrido
-- El recorrido de un minibus esta conformado por varias paradas (ubicaciones)
-- Cada pasagero tiene: nombre y ubicacion de destino
-- Los pasajeros pueden bajar y subir en cualquier parada bajo "condicones"
-- Un pasajero solo puede subir si el recorrido del minibus incluye su destino
-- Un pasajero solo puede bajar si la parada actual del minibus coincide con su destino
-- Un minibus al llegar al final de su recorrido da vuelta y regresa en sentido contrario
-- Un minibus tiene una lista de pardas ya preparadas
-- Un minibus puede transportar múltiples pasajeros.
+- El minibus debe registrar su número de ruta y el recorrido
+- El recorrido de estar conformado por varias paradas (ubicaciones)
+- El minibus debe registrar la lista de pasajeros que transporta
+- El pasajero debe registrar su nombre y ubicación de destino
+- El minibus debe permitir subir a un pasajero solo si el recorrido incluye el destino del pasajero
+- El minibus debe permitir bajar a un pasajero solo si la parada actual coincide con su destino
+- El minibus debe invertir el orden del recorrido al alcanzar la ultima parada
+- El minibus puede transportar multiples pasajeros
+- El minibus debe mostrar su movimiento entre paradas
+- El minibus debe mostrar la accion de abordaje o descenso de pasajeros
 
 Objetos:
 
@@ -48,12 +48,36 @@ Características:
 Acciones:
 
 - Minibus
-  - bajar_pasajero()
+  - bajar_pasajeros()
   - subir_pasajero()
   - avanzar()
+  - mostrar_estado()
 - Pasajero
+  - (sin aciones)
 
 ## Diagrama
+
+Clases:
+
+- Minibus
+  - Nombre: Minibus
+  - Atributos:
+    - numero_ruta: int
+    - ubicacion_actual: String
+    - recorrido: List[String]
+    - pasajeros: List[Pasajero]
+  - Metodos:
+    - bajar_pasajeros()
+    - subir_pasajero()
+    - avanzar()
+    - mostrar_estado()
+- Pasajero
+  - Nombre: Pasajero
+  - Atributos:
+    - nombre: String
+    - destino: String
+  - Metodos:
+    - (sin metodos)
 
 ```mermaid
 classDiagram
@@ -62,9 +86,10 @@ classDiagram
         +ubicacion_actual: String
         +recorrido: List[String]
         +pasajeros: List[Pasajero]
-        +avanzar()
-        +bajar_pasajero()
+        +bajar_pasajeros()
         +subir_pasajero()
+        +avanzar()
+        +mostrar_estado()
     }
     class Pasajero{
         +nombre: String
